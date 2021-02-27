@@ -35,7 +35,7 @@ The data can be extracted in JSON and it looks like this sample:
       }
 ```
 
-It can also be saved in DBs, such as MongoDB with a code like this:
+It can also be saved in DBs, such as MongoDB with a code like this at the end of the spider file:
 
 ```
       {
