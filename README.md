@@ -21,14 +21,13 @@ The data can be extracted in JSON and it looks like this sample:
             "holidays":{
                "facult":[
                   [
-                     "15/02/2021",
+                     "15/02/2021 - ",
                      "Carnaval"
                   ]
                ],
                "feriado":[
                   [
-                     "25/12/2021",
-                     "Natal"
+                     "25/12/2021 - Natal"
                   ]
                ]
             }
