@@ -12,44 +12,44 @@ The Brazilian Institute of Geography and Statistics (IBGE) reports 5570 cities i
 
 The data can be extracted in JSON and it looks like this sample:
 
-'''
-{
-   "city":{
-      "uf":"mg",
-      "cityName":"belo_horizonte",
-      "holidays":{
-         "facult":[
-            [
-               "15/02/2021",
-               "Carnaval"
-            ]
-         ],
-         "feriado":[
-            [
-               "25/12/2021",
-               "Natal"
-            ]
-         ]
+```
+      {
+         "city":{
+            "uf":"mg",
+            "cityName":"belo_horizonte",
+            "holidays":{
+               "facult":[
+                  [
+                     "15/02/2021",
+                     "Carnaval"
+                  ]
+               ],
+               "feriado":[
+                  [
+                     "25/12/2021",
+                     "Natal"
+                  ]
+               ]
+            }
+         }
       }
-   }
-}
-'''
+```
 
 It can also be saved in DBs, such as MongoDB with a code like this:
 
-'''
-{
-    from pymongo import MongoClient
-    client = MongoClient()
-    client = MongoClient ('localhost', 27017)
-    db = client['myBank']
-    myCollection = db.myCollection
-    myCollection_data = {
-        'cities': city
-    }
-    result = myCollection.insert_one (myCollection_data)
-}
-'''
+```
+      {
+          from pymongo import MongoClient
+          client = MongoClient()
+          client = MongoClient ('localhost', 27017)
+          db = client['myBank']
+          myCollection = db.myCollection
+          myCollection_data = {
+              'cities': city
+          }
+          result = myCollection.insert_one (myCollection_data)
+      }
+```
 
 ## Requirements<a name="requirements"></a>
 + [Python 3.6+](https://www.python.org/)
