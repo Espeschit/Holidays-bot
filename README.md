@@ -5,6 +5,7 @@ A bot that scrapes holidays of Brazil built using Scrapy
 + [Overview](#overview)
 + [Requirements](#requirements)
 + [Installation](#installation)
++ [Usage](#usage)
 
 ## Overview<a name="overview"></a>
 This bot scrapes all holidays in Brazil from (http://feriados.com.br/).
@@ -64,6 +65,6 @@ It can also be saved in DBs, such as MongoDB with a code like this at the end of
    `pip3 install scrapy`
    `pip3 install unicode`
 
-## Usage:
+## Usage<a name="usage"></a>:
 1. `cd <holidays/holidays/spiders>`
 2. `scrapy crawl holidays -o holidays.json`
