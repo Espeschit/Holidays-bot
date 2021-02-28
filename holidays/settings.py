@@ -12,6 +12,8 @@ BOT_NAME = 'holidays'
 SPIDER_MODULES = ['holidays.spiders']
 NEWSPIDER_MODULE = 'holidays.spiders'
 
+# Encode scraped strings to utf-8
+FEED_EXPORT_ENCODING = 'utf-8'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT='my-cool-project (http://example.com)'
