@@ -14,25 +14,26 @@ The Brazilian Institute of Geography and Statistics (IBGE) reports 5570 cities i
 The data can be extracted in JSON and it looks like this sample:
 
 ```
-      {
-         "city":{
-            "uf":"mg",
-            "cityName":"belo_horizonte",
-            "holidays":{
-               "facult":[
-                  [
-                     "15/02/2021 - ",
-                     "Carnaval"
-                  ]
-               ],
-               "feriado":[
-                  [
-                     "25/12/2021 - Natal"
-                  ]
-               ]
-            }
-         }
-      }
+	{
+	   "city":{
+	      "uf":"mg",
+	      "cityName":"belo_horizonte",
+	      "holidays":{
+		 "facult":[
+		    [
+		       "15/02/2021 - Carnaval",
+		       "15/10/2021 - Dia do Professor"
+		    ]
+		 ],
+		 "feriado":[
+		    [
+		       "01/01/2021 - Ano Novo",
+		       "25/12/2021 - Natal"
+		    ]
+		 ]
+	      }
+	   }
+	}
 ```
 
 It can also be saved in DBs, such as MongoDB with a code like this at the end of the spider file:

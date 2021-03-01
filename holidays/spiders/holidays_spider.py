@@ -27,9 +27,11 @@ class QuotesSpider(scrapy.Spider):
 
         # Remove states from list
         del cityName[:27]
+
+        # Replace spaces
         cityName = [[item.replace(" ", "_").lower() for item in sublist] for sublist in  cityName]
-        
-        # Remove accents
+       
+       # Remove accents
         cityName = [[unidecode.unidecode(item) for item in sublist] for sublist in cityName]
 
         for i in cityName:
@@ -44,11 +46,15 @@ class QuotesSpider(scrapy.Spider):
         # Get holidays
         for selector in response.css("span.style_lista_feriados"):
             feriado.append(selector.css("::text").extract())
-
+        
         # Get optional holiday (facultativo)
         for selector in response.css("span.style_lista_facultativos"):
             facult.append(selector.css("::text").extract())
-
+        
+        # Join holiday date and name in the same string
+        feriado = [''.join(item) for item in feriado]
+        facult = [''.join(item) for item in facult]
+    
         cities = {
                 'city': {
                     'uf': stateName,
